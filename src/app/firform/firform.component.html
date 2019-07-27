@@ -1,0 +1,65 @@
+<div *ngIf="!registerationid" class="FIRform">
+  <form [formGroup]="FIRform" (ngSubmit)="onSubmit()">
+    <!-- <mat-form-field class="RegistrationNo">
+    <input matInput placeholder="Registration number "  formControlName="RegistrationNo">
+  </mat-form-field> -->
+    <br>
+    <mat-form-field class="Name">
+      <input matInput placeholder="Name " formControlName="Name">
+    </mat-form-field><br>
+    <mat-form-field class="EmailID">
+      <input matInput placeholder="EmailID " formControlName="Emailid">
+    </mat-form-field><br>
+    <mat-form-field class="Mobile">
+      <input matInput placeholder="Mobile " formControlName="Mobile">
+    </mat-form-field>
+
+    <div class="Describe">
+      <div class="h5">
+        <div>
+          <label for="Description">Describe The Incident</label>
+          <textarea class="form-control" formControlName="Description" rows="5"></textarea>
+        </div>
+        <!-- <div class="form-group">
+          <label for="FormControlFile">File Input:</label><br>
+          <input type="file" class="formcontrolfile" formControlName="FormControlFile">
+        </div> -->
+      </div>
+    </div>
+
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Address" formControlName="Address"></textarea>
+    </mat-form-field>
+
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="City" formControlName="City">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="State" formControlName="State">
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <input matInput #postalCode maxlength="6" placeholder="PinCode" formControlName="PinCode">
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+    <button type="submit" mat-raised-button>Submit</button>
+  </form>
+</div>
+
+<div *ngIf="registerationid" class="align-middle response">
+  <div class="card-body m-4 ml-4 " >
+    <h5 class="card-title">Your FIR is Registered. Please note the registration id for further assistance</h5>
+    <p class="card-text font-weight-bold"> {{registerationid}}</p>
+    <a href="#" class="btn btn-primary">HOME</a>
+  </div>
+</div>

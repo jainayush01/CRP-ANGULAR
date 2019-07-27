@@ -1,0 +1,44 @@
+<div *ngIf="!_id">
+  <div class="header">
+    <h4>Enter the Details And Press Submit</h4>
+  </div>
+    <div class="form">
+      <form [formGroup]="Emergency" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+          <mat-select placeholder="Select" formControlName="Reason">
+            <mat-option value="Child Abuse">Child Abuse</mat-option>
+            <mat-option value="Women Harrasment">Women Harrasment</mat-option>
+            <mat-option value="Robbery">Robbery</mat-option>
+            <mat-option value="Murder">Murder</mat-option>
+            <mat-option value="Other">Other</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field>
+          <input matInput placeholder="Name" formControlName="Name">
+        </mat-form-field>
+
+        <br>
+        <mat-form-field>
+          <input matInput placeholder="Mobile" formControlName="Mobile">
+        </mat-form-field>
+
+        <br>
+        <mat-form-field>
+          <textarea matInput placeholder="Address" formControlName="Address"></textarea>
+        </mat-form-field>
+
+        <br>
+        <button type="submit" mat-raised-button>Submit</button>
+      </form>
+    </div>
+</div>
+
+<div *ngIf="_id" class="align-middle response">
+  <div class="card-body m-4 ml-4 ">
+    <h5 class="card-title">Your Report is Submitted. Our Officer will reach you as soon as possible</h5>
+    <!-- <p class="card-text font-weight-bold"> {{_id}}</p> -->
+    <a href="#" class="btn btn-primary">HOME</a>
+  </div>
+</div>

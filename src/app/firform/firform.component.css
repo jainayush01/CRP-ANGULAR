@@ -1,0 +1,35 @@
+.FIRform {
+  min-width: 300px;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  margin-top: 2%;
+  border: 2px solid rgb(42, 10, 94);
+  padding: 10px;
+}
+.response{
+  margin: auto;
+  padding: 1px;
+  border: 1px solid black;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 10%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+td {
+  padding-right: 8px;
+}
+
+/* .formArea {
+    margin: 0;
+    width: 80%;
+  }
+  
+  mat-form-field{
+    width: 100%;
+    margin: 0
+  } */

@@ -1,0 +1,28 @@
+
+     .loginform1 {
+        min-width: 150px;
+        max-width: 500px;
+        width: 100%;
+      }
+      
+      .width {
+        width: 100%;
+      }
+      .loginform1{  margin: auto;
+        margin-top: 0%;
+        width: 80%;
+        border: 3px solid rgb(7, 7, 7);
+        padding: 10px;}
+
+        .password {
+            display: flex;
+            flex-direction: column;
+          }
+          
+          .password > * {
+            width: 100%;
+          }
+          .header{
+            margin-left: 43%;
+            margin-top: 8%
+          }

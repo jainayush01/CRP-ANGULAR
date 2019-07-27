@@ -1,0 +1,31 @@
+<div *ngIf="!_id">
+<div class="header">
+  <h3>
+    Enter The Details
+  </h3>
+</div>
+<form [formGroup]="ReportACrime" (ngSubmit)="onSubmit()">
+
+  <div class="ReportACrime">
+<div class="h4">
+    <div>
+        <label for="Description">Describe The Incident</label>
+        <textarea class="form-control" formControlName="Description" rows="5"></textarea>
+      </div>
+    <!-- <div class="form-group"> -->
+      <!-- <label for="FormControlFile">File Input:</label><br>
+      <input type="file" class="formcontrolfile" formControlName="FormControlFile">
+    </div> -->
+    <input type="submit" mat-raised-button>  
+  </div>
+    </div>
+  </form>
+</div>
+
+  <div *ngIf="_id" class="align-middle response">
+    <div class="card-body m-4 ml-4 " >
+      <h5 class="card-title">Your Report is Submitted.</h5>
+      <!-- <p class="card-text font-weight-bold"> {{_id}}</p> -->
+      <a href="#" class="btn btn-primary">HOME</a>
+    </div>
+  </div>

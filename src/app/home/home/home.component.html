@@ -1,0 +1,54 @@
+<mat-grid-list class="upper" cols="1" rowHeight="4:1">
+  <mat-grid-tile>
+    <div class="headermain">
+      <h2>CRIME REPORTING PORTAL</h2>
+    </div>
+    <div class="image">
+      <img src="assets/img/satyamevjayate.jpg" alt="img">
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list cols="3" rowHeight="4:3">
+  <mat-grid-tile>
+    <div class="header1">
+      <h4>In Emergency Case Please Press The Button</h4>
+      <div class="buttonemer">
+        <button mat-raised-button color="warn" (click)="routonemergencyform()">Emergency</button>
+      </div>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div class="col-sm">
+      <h4>For Filing FIR Please Register</h4>
+      <form class="FIRregistration" [formGroup]="FIR" (submit)="firform()">
+        <mat-form-field class="name">
+          <input matInput placeholder="Full name" formControlName="fullName">
+        </mat-form-field>
+        <mat-form-field class="MobileNumber">
+          <span matPrefix>+91 &nbsp;</span>
+          <input type="tel" matInput placeholder="Mobile Number" formControlName="mobileNo">
+        </mat-form-field>
+        <mat-form-field class="email">
+          <input matInput placeholder="Email" formControlName="email">
+          <mat-error *ngIf="FIR.controls.email.hasError('pattern') && !FIR.controls.email.hasError('required')">
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="FIR.controls.email.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        <input mat-raised-button type="submit" value="Submit">
+      </form>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <form action=""></form>
+    <div class="checkstatus">
+      <h4>For Checking Status Enter The Registration Number</h4>
+      <mat-form-field class="name">
+        <input matInput placeholder="Registration Number" [(ngModel)]="RegNumber">
+      </mat-form-field>
+      <button mat-raised-button (click)="chkstatus()">Submit</button>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

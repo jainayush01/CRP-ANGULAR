@@ -1,0 +1,36 @@
+#mySidenav a {
+    position: absolute; /* Position them relative to the browser window */
+    left: -80px; /* Position them outside of the screen */
+    transition: 0.4s; /* Add transition on hover */
+    padding: 15px; /* 15px padding */
+    width: 100px; /* Set a specific width */
+    text-decoration: none; /* Remove underline */
+    font-size: 15px; /* Increase font size */
+    color: white; /* White text color */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+    /* border: 1px solid black; */
+  }
+  
+  #mySidenav a:hover {
+    left: 0; /* On mouse-over, make the elements appear as they should */
+  }
+  
+  /* The about link: 20px from the top with a green background */
+  #Home {
+    top: 20px;
+    background-color: rgba(198, 116, 236, 0.842);
+  }
+  
+  #OfficersLogin {
+    top: 60px;
+    background-color: rgb(243, 62, 39); /* Blue */
+  }
+  
+  #ReportACrime {
+    top: 120px;
+    background-color: #768dd8f1; /* Red */
+  }
+  #KnowyourStation {
+    top: 180px;
+    background-color: rgba(40, 184, 11, 0.842);
+  };

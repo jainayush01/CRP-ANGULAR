@@ -1,0 +1,23 @@
+.logout {
+    margin-left: 94%;
+    margin-top: 1%;
+}
+
+table {
+    width: 100%;
+    margin: auto;
+    margin-top: 1%;
+    width: 90%;
+    border: 2px solid rgb(7, 7, 7);
+    padding: 10px;
+}
+
+.emergencytable {
+    margin-left: 41%
+}
+.FIRtable{
+    margin-left: 41%
+}
+.reportACrime{
+    margin-left: 41%
+}

@@ -1,0 +1,23 @@
+<div class="header">
+  <h3>
+    Enter The Pincode
+  </h3>
+</div>
+<form [formGroup]="knowStation" class="Station">
+  <mat-form-field class="pincode">
+    <input matInput placeholder="Enter the pincode" type="number" max="6" formControlName="pincode" (keyup)="getDetails()">
+  </mat-form-field><br>
+  <!-- <button mat-raised-button (click)='Submit()'>Submit</button> -->
+  <div class="details">
+    <mat-form-field>
+      <input matInput placeholder="Station Name" formControlName="stationName">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Contact number" formControlName="contact">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput placeholder="Address" formControlName="address"></textarea>
+    </mat-form-field>
+  
+  </div>
+  </form>

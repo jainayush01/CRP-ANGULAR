@@ -1,0 +1,23 @@
+<div class="header">
+  <h4>
+    Please Login Here
+  </h4>
+</div>
+<form [formGroup]="loginForm" class="loginform1">
+  <mat-form-field class="width">
+    <input matInput placeholder="Email" formControlName="email">
+    
+  </mat-form-field>
+
+  <div>
+    <mat-form-field class="width">
+      <input matInput placeholder="Enter your password" formControlName="password" [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+  <button mat-raised-button (click)="login()">Login</button>
+  <p id="msg">{{msg}}</p>
+</form>

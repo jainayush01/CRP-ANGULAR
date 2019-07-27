@@ -1,0 +1,26 @@
+.Station {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .Station {
+    width: 100%;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .details > * {
+    width: 100%;
+  }
+  .Station{  margin: auto;
+    margin-top: 0%;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;}
+    .header{
+        margin-left: 42%;
+        margin-top: 8%
+    }
